@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kingsley</title>
+</head>
+<style>
+    .navbar {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        background-color: green;
+        height: 60px;
+    }
+
+    .navbar a {
+        text-decoration: none;
+        color: white;
+        font-weight: 100;
+        font-size: 24px;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .hero-text {
+        text-align: center;
+        color: white;
+    }
+
+    .hero-text button {
+        border: none;
+        padding: 10px 25px;
+        color: white;
+        font-weight: 600;
+        border-radius: 5px;
+        background-color: green;
+    }
+
+    .hero-text button:hover {
+        background-color: black;
+        color: white;
+    }
+
+    .hero-image {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(image/heroimage.jpeg);
+        height: 100vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        color: white;
+    }
+
+    .about-us {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .about-us h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .about-us p {
+        font-size: 16px;
+        text-align: center;
+        max-width: 800px;
+    }
+
+    .services-container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding: 20px;
+        background-color: white;
+
+    }
+
+    .services {
+        flex: 1;
+        min-width: 250px;
+        max-width: 300px;
+        margin: 10px;
+        padding: 20px;
+        background-color: green;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        text-align: center;
+    }
+
+    .services h1 {
+        text-align: center;
+    }
+
+    .services h2 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .services p {
+        font-size: 1;
+        color: black;
+    }
+
+    .head {
+        color: white
+    }
+
+    .footer {
+        background-color: green;
+        color: white;
+    }
+
+    .policy {
+        text-align: center;
+        color: white;
+        padding: 10px;
+    }
+
+    .main-serv {
+        text-align: center;
+    }
+
+    .logo-img {
+        width: 30px;
+        height: 30px;
+        font: left;
+        margin: 10px;
+    }
+
+    .navbar a:hover {
+        color: black;
+    }
+
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .gallery-items {
+        position: relative;
+        margin: 15px;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgb(0, 0, 0, 0, .1);
+        transition: tranfrom 0.3s ease;
+
+    }
+
+    .gallery-items img {
+        width: 100px;
+        height: 200px;
+        display: block;
+        width: 400px;
+        height: 400px;
+    }
+
+    .gallery-info {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 20;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: #fff;
+        text-align: center;
+        opacity: 0;
+
+    }
+
+    .gallery-info h3 {
+        margin: 0, 0, 10px;
+        font-size: 20px;
+
+    }
+
+    .gallery-info p {
+        margin: 0, ;
+        font-size: 16px;
+
+    }
+
+
+
+
+    .contact-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 70vh;
+        padding: 20px;
+        margin: 30px;
+    }
+
+    .contact-from {
+        max-width: 600px;
+        width: 100%;
+        background-color: #fff;
+        padding: 20px;
+        border: 3px solid green;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    }
+
+    .contact-from h1 {
+        margin-bottom: 20px;
+        font-size: 2em;
+        color: #333;
+
+    }
+
+    .contact-from label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+        color: black;
+
+    }
+
+    .contact-from input,
+    .contact-from textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-sizing: border-box;
+
+    }
+
+    .contact-from input {
+        border: 3px solid reb(114, 113, 113);
+        color: rgb(17, 17, 16);
+        padding: 15px;
+        font-size: 1em;
+        cursor: pointer;
+    }
+
+    .contact-from input:hover {
+        border: 3px solid rgb(0, 255, 106)
+    }
+</style>
+
+<body>
+
+    <nav class="navbar">
+        <a><img class="logo-img" src="image/kingsley.png" alt="kid"></a>
+        <a href="#about">about-us</a>
+        <a href="#gallery-section">gallery</a>
+        <a href="#contact-container">contact</a>
+    </nav>
+    <div class="hero-image">
+        <div class="hero-text">
+            <h1 style="font-size:50px;">KING TECH $</h1>
+            <p style="color:white font-whites;"> am a web-developer </p>
+            <button id="gallery">Cilck me</button>
+        </div>
+    </div>
+    <section id="about" class="about-us">
+        <div class="float-div">
+            <img src="image/Premium Photo _ Future artificial intelligence robot and cyborg_.jpeg" alt="kid">
+
+        </div>
+        <h1><a href="#">About us</a></h1>
+        <p>kings-tech, we are dedicated to dlivering exctional services and
+            innovative solution. with year of experience in the industy, our team is committed to
+            providing solutions to some tech riddles tailored to meet the needs of the .our divers clientele.
+        </p>
+
+    </section>
+    <section id="services" class="services-container">
+        <div style="background-color:white#f9f9f9; width: 100%;text-align: center;">
+            <h1>OUR SERVICES</h1>
+        </div>
+        <div class="services">
+            <h2 class="head">web-development</h2>
+            <p> We build responsive and high- performance wedsites tailored to your needs.
+                our team uses the latest technology to ensure your online presence stands </p>
+        </div>
+        <div class="services">
+            <h1 class="head">cloud solution</h1>
+            <p>we provide scalable secure cloud solution cover IOS and platfroms.
+                we create user-friend and feature-rich application thet engege and retain users. </p>
+
+        </div>
+    </section>
+    <section id="gallery-section">
+        <div class="gallery">
+            <div class="gallery-items">
+                <img src="image/technology 2.jpeg" alt="itme 1">
+                <div class="img-teg">
+                    <h3>To have sill in web-development</h3>
+                </div>
+            </div>
+            <div class="gallery-items">
+                <img src="image/technology1.jpeg" alt="item 2">
+                <div class="img-teg">
+                    <h3>to no more about network</h3>
+                </div>
+            </div>
+
+            <div class="gallery-items">
+                <img src="image/technology11.jpeg" alt="item 3">
+                <div class="img-teg">
+                    <h3>to make app</h3>
+                </div>
+            </div>
+
+            <div class="gallery-items">
+                <img src="image/technology10.jpeg" alt="item 4">
+                <div class="img-teg">
+                    <h3>to no about syme</h3>
+                </div>
+            </div>
+
+            <div class="gallery-items">
+                <img src="image/technology5.jpeg" alt="itme 5">
+                <div class="img-teg">
+                    <h3> to no about ther icon</h3>
+                </div>
+            </div>
+
+            <div class="gallery-items">
+                <img src="image/technology4.jpeg" alt="item 6">
+                <div class="img-teg">
+                    <h3>to make them build batter</h3>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+        <section id="contact-container" class="contact-container">
+            <form class="contact-from" method="post">
+                <h1 style="text-align: center;">Contact us</h1>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="name">Email</label>
+                <input type="text" id="email" name="email" required>
+
+                <label for="name">ardess</label>
+                <input type="text" id="ardess" name="ardess" required>
+            </form>
+
+        </section>
+       
+        <footer style="background-color:green;">
+            <marquee behavior="move" direction="right">
+                <p>&copy; 2024 KING TECH $</p>
+            </marquee>
+            <p class="policy"><a href="#">Privacy Policy</a><a href="#">Terms of services</a></p>
+        </footer>
+    </body>
+
+</html>
